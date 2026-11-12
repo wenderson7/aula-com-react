@@ -3,11 +3,12 @@ import imgChocolat from '../../assets/img/produtos/le_grand_chocolat.png'
 import usuario from '../../assets/icones/user.svg'
 import iconStar from '../../assets/icones/star.svg'
 import { Link } from 'react-router-dom'
+import Card from '../../components/card/Card'
 
 function ListaProdutos() {
-    return(
+    return (
         <>
-            
+
             <main>
                 <section className="prod_banner" />
                 <section className="container prod_container">
@@ -17,38 +18,23 @@ function ListaProdutos() {
                         <hr />
                     </div>
                     <div className="prod_cards">
-                        <article className="prod_card">
-                            <figure>
-                                <img
-                                    src={imgChocolat}
-                                    alt="foto do produto"
-                                />
-                            </figure>
-                            <h2>
-                                <Link to="/detalheproduto">Le Grand Chocolat</Link>
-                            </h2>
-                            <p className="card_desc">
-                                Mousse de chocolate belga 70%, praliné de avelãs e biscuit de cacau.
-                            </p>
-                            <p className="card_rodape">
-                                <data value={185.0}>R$ 185,00 / kg</data>
-                                <span className="card_av">
-                                    <img src={usuario} alt="icone de usuarios" />
-                                    <data value={10}>10</data>
-                                    <img src={iconStar} alt="icone de estrela" />
-                                    <data value="9.5">9,5</data>
-                                </span>
-                            </p>
-                        </article>
+                        <Card
+                            imgChocolat={imgChocolat}
+                            nome={'Le Grand Chocolat'}
+                            descricao={' Mousse de chocolate belga 70%, praliné de avelãs e biscuit de cacau.'}
+                            valor={185.0}
+                            quantidadeAvaliacoes={10}
+                            nota={9.5} 
+                        />
                     </div>
                 </section>
             </main>
-            
+
         </>
-    
+
     )
 
-        
+
 }
 
 export default ListaProdutos;
