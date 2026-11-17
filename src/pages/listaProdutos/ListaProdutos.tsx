@@ -35,6 +35,7 @@ function ListaProdutos() {
 
                         {produtos.map(produto => {
                             return < Card
+                            id={produto.id}
                             key={produto.id}
                             imgChocolat={`http://localhost:3000${produto.imagem}`}
                             nome={produto.nome}

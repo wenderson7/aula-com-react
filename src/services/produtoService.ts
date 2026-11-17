@@ -5,6 +5,10 @@ const produtoService = {
     async listar(){
         const resposta = await api.get<Produto[]>('produtos')
         return resposta.data;
+    },
+    async buscar (id: number){
+        const resposta = await api.get(`produto/${id}`)
+        return resposta.data;
     }
 }
 
