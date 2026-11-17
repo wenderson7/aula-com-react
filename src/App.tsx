@@ -15,7 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/produtos" element={<ListaProdutos />} />
-        <Route path="/detalheproduto" element={<DetProduto />} />
+        <Route path="/detalheproduto/:id" element={<DetProduto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admProdutos" element={<AdmProduto />} />
         <Route path="*" element={<img className="container-notfound" src="https://cdn.dribbble.com/userupload/41802618/file/original-30bd81eb7c805503b995ab442f08b739.gif" alt="Imagem de não encontrado" />} />
