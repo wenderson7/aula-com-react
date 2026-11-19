@@ -7,7 +7,7 @@ const produtoService = {
         return resposta.data;
     },
     async buscar (id: number){
-        const resposta = await api.get(`produto/${id}`)
+        const resposta = await api.get(`produtos/${id}`)
         return resposta.data;
     }
 }
